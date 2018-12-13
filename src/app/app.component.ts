@@ -26,10 +26,12 @@ export class AppComponent {
     '    Angular 6, Java, HTML, CSS, Javascript, Python & 4 years of experience in customization of\n' +
     '    Oracle Agile Product Lifecycle Management using Core Java, Groovy Script and Agile\n' +
     '    Software Development Kit(SDK).';
+  tag1 = ['Angular 6', 'NodeJs', ''];
+  tags = [];
   constructor () {
     let index = 0 ;
     while (index < 5 ) {
-      const proj = {projName: this.projectArray[index], projDesc: this.projDesc[index]};
+      const proj = {projName: this.projectArray[index], projDesc: this.projDesc[index], url: this.sub_url[index]};
       this.projects.push(proj);
       index = index + 1;
     }

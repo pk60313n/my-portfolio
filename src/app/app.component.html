@@ -28,13 +28,15 @@
          [ngClass]="{'orange':findColor(i)==='orange', 'green': findColor(i) === 'green'}" >
      <div class="overlay">
       <div class="overlay_content">
-        <div>{{project.projName}} <a [href]="" ><img src="/src/assets/Images/github.svg"></a></div>
+        <div class="overlay_con_title">{{project.projName}}
+          <a [href]="project.url" target="_blank"><img src="/src/assets/Images/github.svg"></a></div>
+        <br><br>
         <div>{{project.projDesc}}</div>
         <div class="tags" >
           <div></div>
         </div>
       </div>
-     </div>/
+     </div>
       <div fxFlex fxFlexAlign="end"> {{project.projName}} </div>
     </div>
 
