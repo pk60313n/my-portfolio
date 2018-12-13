@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+@font-face {
+  font-family: sfProText;
+  src: url("/assets/Fonts/SFProText-Regular.ttf");
+}
+
+.sfPro_T{
+  font-family: sfProText;
+}
+
+@font-face {
+  font-family: sfProDisplay;
+  src: url("/assets/Fonts/SFProDisplay-Regular.ttf");
+}
+
+.sfPro_D {
+  font-family: sfProDisplay;
+}

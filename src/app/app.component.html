@@ -1,20 +1,50 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container sfPro_T" fxLayout="row" fxLayout.lt-md="column">
+<div class="sub_container" fxFlex="100%" >
+<nav class="nav" >
+  <div fxShow="true" fxHide.lt-md = "true" fxLayoutAlign="end" fxLayoutGap="54px">
+    <a [ngClass]="{active:true}">Portfolio</a>
+    <a>Skills</a>
+    <a fxFlex="13%">Hire Me</a>
+  </div>
+  <div fxShow="true" fxHide.gt-sm="true" fxLayoutAlign="end">
+    <button class="nav_btn"><img src="/src/assets/Images/nav.svg"></button>
+  </div>
+</nav>
 
+<main class="content" fxLayout="column" fxLayout.lt-md ="column" fxLayoutAlign.lt-md="center center">
+  <div class="main_title sfPro_D" fxHide.lt-md="true">Puneetpal Kaur</div>
+  <div class="mob_title sfPro_D" fxHide.gt-sm="true" fxLayoutAlign="center center"><div fxFlex>PK</div></div>
+  <div class="sub_title sfPro_T" >
+    {{sub_title}}
+  </div>
+  <div class="sep_text" fxLayout="row inline wrap">
+    <span>PROJECTS &nbsp;</span> <span fxFlex><hr class="line"></span>
+  </div>
+  <div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap.gt-sm="10px" fxLayoutGap.lt-md="5px" class="projects" >
+
+    <div fxFlex="0 1 calc(50% -10px)" fxHide.lt-md="true"
+         *ngFor="let project of projects;index as i;" class="proj_name" (mouseover)="setHover(i)"
+         (mouseout)="resetHover(i)" id="{{i}}"
+         [ngClass]="{'orange':findColor(i)==='orange', 'green': findColor(i) === 'green'}" >
+     <div class="overlay">
+      <div class="overlay_content">
+        <div>{{project.projName}} <a [href]="" ><img src="/src/assets/Images/github.svg"></a></div>
+        <div>{{project.projDesc}}</div>
+        <div class="tags" >
+          <div></div>
+        </div>
+      </div>
+     </div>/
+      <div fxFlex fxFlexAlign="end"> {{project.projName}} </div>
+    </div>
+
+    <div fxFlex.lt-md="0 1 100%" fxHide.gt-sm="true"
+         *ngFor="let project of projectArray; index as i;" class="proj_name"
+         [ngClass]="{'orange':i % 2 === 0, 'green': i % 2 !== 0}">
+      <div fxFlex fxFlexAlign="end"> {{project}}</div>
+    </div>
+  </div>
+
+</main>
+</div>
+</div>

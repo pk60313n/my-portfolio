@@ -1,0 +1,152 @@
+.container{
+  color: #37474F;
+}
+.sub_container{
+  background-color: rgba(245, 245, 245, 0.67);
+  margin: 20px;
+}
+.nav{
+  padding-top: 50px;
+  font-weight: 600;
+  line-height: normal;
+  font-size: 14px;
+  letter-spacing: 0.129937px;
+}
+.active {
+  color: #EE6557;
+}
+.nav_btn{
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+.content{
+  padding-left: 76px;
+  padding-right: 76px;
+}
+.main_title{
+  font-size: 48px;
+  letter-spacing: 0.4455px;
+  padding-top: 118px;
+}
+.mob_title{
+  font-size: 48px;
+  letter-spacing: 0.4455px;
+  border-radius: 50%;
+  background: #EE6557;
+  width: 120px;
+  height: 120px;
+  color: white;
+  text-align: center;
+}
+.sub_title {
+  line-height: 24px;
+  font-size: 16px;
+  letter-spacing: -0.05px;
+  padding-top: 12px;
+}
+.sep_text {
+  width: 100%;
+  font-family: sfProText;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 12px;
+  letter-spacing: 0.111375px;
+  color: #9B9B9B;
+  padding-top: 83px;
+  padding-bottom: 83px;
+}
+.line{
+  border: 1px solid #E4E4E4;
+}
+.projects {
+  background: white;
+  font-family: sfProDisplay;
+  font-size: 36px;
+  letter-spacing: 0.297px;
+  color: #FEFEFE;
+  padding-left: 10px;
+}
+.proj_name{
+  padding: 10px;
+}
+.orange{
+  background-color: #EE6557;
+  min-height: 350px;
+  margin-top: 10px;
+}
+.green {
+  background-color: #48C6AA;
+  min-height: 350px;
+  margin-top: 10px;
+}
+
+.cont_over {
+  position: relative;
+  width: 50%;
+}
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008ebc;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+  display: none;
+  padding: 20px;
+}
+.cont_over:hover .overlay {
+  bottom: 0;
+  height: 100%;
+  display: block;
+}
+.cont_over:hover .projects {
+    display: none;
+}
+.overlay_content {
+  font-family: sfProText !important;
+  line-height: 24px!important;
+  font-size: 16px!important;
+  letter-spacing: 0.05px!important;
+  color: white!important;
+}
+
+.overlay_con_title {
+  font-family: sfProDisplay;
+  line-height: 24px;
+  font-size: 20px;
+  letter-spacing: 0.1px;
+}
+
+@media (max-width: 600px) {
+  .sub_title {
+   text-align: justify;
+    padding-top: 20px;
+  }
+  .sub_container{
+    margin: 15px;
+  }
+  .content{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .nav{
+    padding-top: 10px;
+  }
+  .projects{
+    padding-left: 0px;
+    width: 100%;
+  }
+  .orange, .green {
+    min-height: 250px;
+    margin: 0;
+    font-size: 20px;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+}
